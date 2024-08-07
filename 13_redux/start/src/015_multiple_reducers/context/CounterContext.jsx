@@ -1,18 +1,18 @@
-import { createContext, useContext, useReducer } from "react";
+// import { createContext, useContext, useReducer } from "react";
 
 const CounterContext = createContext();
 const CounterDispatchContext = createContext();
 
-const reducer = (prev, { type, step }) => {
-  switch (type) {
-    case "+":
-      return prev + step;
-    case "-":
-      return prev - step;
-    default:
-      throw new Error('不明なactionです。')
-  }
-};
+// const reducer = (prev, { type, step }) => {
+//   switch (type) {
+//     case "+":
+//       return prev + step;
+//     case "-":
+//       return prev - step;
+//     default:
+//       throw new Error('不明なactionです。')
+//   }
+// };
 
 const CounterProvider = ({ children }) => {
 

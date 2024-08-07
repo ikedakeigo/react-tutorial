@@ -1,17 +1,10 @@
-import { createStore } from "redux";
+// import {coufigureStore} from '@reduxjs/toolkit';
+import { configureStore } from '@reduxjs/toolkit';
+import reducer from '../modules/counter';
+// import reducer from './modules/counter';
 
-const initialState = 0;
-const reducer = (state = initialState, { type, step }) => {
-    switch (type) {
-      case "+":
-        return state + step;
-      case "-":
-        return state - step;
-      default:
-        return state;
-    }
-  };
-
-export default createStore(
-    reducer
-);
+export default configureStore ({
+  reducer: {
+    counter: reducer
+  }
+})
